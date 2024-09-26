@@ -21,3 +21,38 @@ A simple server for a website on Akash
 
 ## Configuring your deployment (Ubuntu instance)
 
+- After logging in to your new server, run:
+
+``` 
+ apt updatea
+ apt upgrade 
+```
+
+- Remoe Apache
+
+```
+
+apt remove --autoremove apache2 apache2-utils  
+```
+
+- Install Nginx
+
+``` 
+ apt install nginx
+```
+
+- Check Nginx Status
+
+``` 
+ service nginx status
+```
+
+- Enable Nginx
+
+``` 
+ service nginx start
+```
+
+## Build your website
+
+Your Nginx server should now be working. You can now go to /var/www/html and start building your site.  
