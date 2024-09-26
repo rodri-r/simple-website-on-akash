@@ -63,7 +63,7 @@ You can get your URL from Akash Console. Click on your deployment and on the lea
 
 - Add a domain and https to your website.
 
-Add the following in the expose section of the [a link](deploy.yaml) file (it must go below as: 80):
+Add the following in the expose section of the [deploy.yaml](deploy.yaml) file (it must go below as: 80):
 
 ``` 
 accept:
