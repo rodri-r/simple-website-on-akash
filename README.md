@@ -55,4 +55,10 @@ apt remove --autoremove apache2 apache2-utils
 
 ## Build your website
 
-Your Nginx server should now be working. You can now go to /var/www/html and start building your site.  
+Your Nginx server should now be working. You can now go to /var/www/html and start building your site.  Simply delete the file index.nginx-debian.html and create an index.html file or whatever website you feel like.
+
+You can get your URL from Akash Console. Click on your deployment and on the leases tab, you will see URI(s): copy that and paste it in your browser. 
+
+## Extras
+
+- Add a domain and https to your website. 
