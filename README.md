@@ -28,11 +28,17 @@ A simple server for a website on Akash
  apt upgrade 
 ```
 
-- Remoe Apache
+- Remove Apache
 
 ```
-
 apt remove --autoremove apache2 apache2-utils  
+```
+
+- Confirm that it has been removed
+
+```
+rm -r /etc/apache2
+rm -r /var/log/apache2
 ```
 
 - Install Nginx
@@ -69,9 +75,10 @@ Add the following in the expose section of the [deploy.yaml](deploy.yaml) file (
 accept:
           - example.com
 ```
-- Go to dnschecker.org and get your provider's ip, by inserting your provider domain, which can be found in Akash Console, under the leases tab. 
-- Get a Cloudflare account.
-- Go to your Domain provider and point your domain's dns to your Cloudfare DNS.
-- Go to Cloudflare and point your DNS to your provider's ip
+-- Go to dnschecker.org and get your provider's ip, by inserting your provider domain, which can be found in Akash Console, under the leases tab. 
+-- Get a Cloudflare account.
+-- Go to your Domain provider and point your domain's dns to your Cloudfare DNS.
+-- Go to Cloudflare and point your DNS to your provider's ip
 
+- The front page of a website has been included. 
 
