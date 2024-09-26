@@ -1,0 +1,51 @@
+---
+version: "2.0"
+services:
+  service-1:
+    image: ubuntu:latest     
+    env:
+          - "SSH_PASS=PLACEYOURPASSWORDHERE"
+    command:
+      - "bash"
+      - "-c"
+    args:
+      - 'apt-get update ; apt-get upgrade -y ; apt install -y ssh;
+        echo "PermitRootLogin yes" >> /etc/ssh/sshd_config ;
+        (echo $SSH_PASS; echo $SSH_PASS) | passwd root ; 
+        service ssh start;
+        echo ==== ssh user:"root" === ;
+        echo === ssh pass:"$SSH_PASS" === ;
+        apt-get install nano -y ;
+        apt-get install tmux -y ;
+        apt-get install unzip -y ;
+        sleep infinity'
+    expose:
+      - port: 22
+        as: 22
+        to:
+          - global: true
+      - port: 80
+        as: 80
+        to:
+          - global: true     
+profiles:
+  compute:
+    service-1:
+      resources:
+        cpu:
+          units: 1
+        memory:
+          size: 1Gi
+        storage:
+          - size: 25Gi
+  placement:
+    dcloud:
+      pricing:
+        service-1:
+          denom: uakt
+          amount: 10000
+deployment:
+  service-1:
+    dcloud:
+      profile: service-1
+      count: 1
