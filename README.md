@@ -24,7 +24,7 @@ A simple server for a website on Akash
 - After logging in to your new server, run:
 
 ``` 
- apt updatea
+ apt update
  apt upgrade 
 ```
 
