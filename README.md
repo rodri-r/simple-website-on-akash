@@ -75,10 +75,10 @@ Add the following in the expose section of the [deploy.yaml](deploy.yaml) file (
 accept:
           - example.com
 ```
--- Go to dnschecker.org and get your provider's ip, by inserting your provider domain, which can be found in Akash Console, under the leases tab. 
--- Get a Cloudflare account.
--- Go to your Domain provider and point your domain's dns to your Cloudfare DNS.
--- Go to Cloudflare and point your DNS to your provider's ip
+1. Go to dnschecker.org and get your provider's ip, by inserting your provider domain, which can be found in Akash Console, under the leases tab. 
+2. Get a Cloudflare account.
+3. Go to your Domain provider and point your domain's dns to your Cloudfare DNS.
+4. Go to Cloudflare and point your DNS to your provider's ip
 
-- The front page of a website has been included. 
+- The front page of a website has been included in this repo. 
 
