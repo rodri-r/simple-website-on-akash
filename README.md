@@ -61,4 +61,17 @@ You can get your URL from Akash Console. Click on your deployment and on the lea
 
 ## Extras
 
-- Add a domain and https to your website. 
+- Add a domain and https to your website.
+
+Add the following in the expose section of the [a link](deploy.yaml) file (it must go below as: 80):
+
+``` 
+accept:
+          - example.com
+```
+- Go to dnschecker.org and get your provider's ip, by inserting your provider domain, which can be found in Akash Console, under the leases tab. 
+- Get a Cloudflare account.
+- Go to your Domain provider and point your domain's dns to your Cloudfare DNS.
+- Go to Cloudflare and point your DNS to your provider's ip
+
+
